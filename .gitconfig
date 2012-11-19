@@ -1,0 +1,19 @@
+[user]
+	name = michaelporter
+	email = michaelporter.0988@gmail.com
+[core]
+	excludesfile = /Users/michaelporter/.gitignore_global
+[alias]
+	s = status
+	b = branch
+	co = checkout
+	amend = commit --amend -C HEAD
+        l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = 1
