@@ -1,5 +1,11 @@
 */
 *history
+.gitignore
 *.jpg
 *.pdf
 *.png
+.CFUserTextEncoding
+.lesshst
+.netrc
+.viminfo
+PostgresNotes
