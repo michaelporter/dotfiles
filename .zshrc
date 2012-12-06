@@ -7,3 +7,10 @@ export cd
 alias cwd='cd "$(cat ~/.cwd)"'
 
 cwd
+
+PROMPT='%% '
+
+autoload -U zutil
+autoload -U compinit
+autoload -U complist
+compinit
