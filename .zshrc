@@ -14,3 +14,8 @@ autoload -U zutil
 autoload -U compinit
 autoload -U complist
 compinit
+
+
+alias leac='clear'
+alias alce='clear'
+alias claer='clear'
