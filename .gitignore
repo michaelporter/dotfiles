@@ -4,6 +4,10 @@
 *.jpg
 *.pdf
 *.png
+*.TMP
+*.doc
+*.txt
+*.c
 .CFUserTextEncoding
 .lesshst
 .netrc
@@ -11,3 +15,4 @@
 PostgresNotes
 .cwd
 .Xauthority
+arduino*
