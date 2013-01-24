@@ -1,6 +1,7 @@
+# Directories
 */
-*history
-.gitignore
+
+# Extensions
 *.jpg
 *.pdf
 *.png
@@ -8,11 +9,16 @@
 *.doc
 *.txt
 *.c
+
+# Dotfiles
 .CFUserTextEncoding
+.cwd
 .lesshst
 .netrc
 .viminfo
-PostgresNotes
-.cwd
 .Xauthority
+
+# Normal Files
 arduino*
+*history
+PostgresNotes
