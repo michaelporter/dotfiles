@@ -22,18 +22,20 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set expandtab
 set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set ignorecase  " ignores all case when searching
-set smartcase   " ignores case only when search is all lowercase
-set scrolloff=3 " maintains a minimal buffer of visible spaces around the active line
-set wildmode=longest,full
-set expandtab
-set tabstop=2
-set smartindent
+set nohlsearch
+set number " shows line numbers
+set ruler		" show the cursor position all the time
+set scrolloff=10 " maintains a minimal buffer of visible spaces around the active line
 set shiftwidth=2
+set showcmd		" display incomplete commands
+set smartcase   " ignores case only when search is all lowercase
+set smartindent
+set tabstop=2
+set wildmode=longest,full
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -48,10 +50,10 @@ if has('mouse')
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" Also switch on highlighting the last used search pattern. -- Removed 1/24/13
 if &t_Co > 2 || has("gui_running")
   syntax on
-  set hlsearch
+  "set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
