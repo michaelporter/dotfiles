@@ -2,13 +2,15 @@
 */
 
 # Extensions
+*.c
+*.doc
 *.jpg
 *.pdf
+*.pem
 *.png
+*.sql
 *.TMP
-*.doc
 *.txt
-*.c
 
 # Dotfiles
 .CFUserTextEncoding
