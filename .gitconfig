@@ -3,6 +3,8 @@
 	email = michaelporter.0988@gmail.com
 [core]
 	excludesfile = /Users/michaelporter/.gitignore_global
+[push]
+  default = current
 [alias]
 	s = status
 	b = branch
