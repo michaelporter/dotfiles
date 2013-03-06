@@ -9,15 +9,16 @@
 *.pem
 *.png
 *.sql
-*.DS_Store
 *.TMP
 *.txt
 
 # Dotfiles
 .CFUserTextEncoding
 .cwd
+.DS_Store
 .lesshst
 .netrc
+.rnd
 .viminfo
 .Xauthority
 
