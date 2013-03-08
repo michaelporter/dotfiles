@@ -23,7 +23,7 @@ SAVEHIST=150
 HISTFILE=~/.zsh_history
 
 # shouldn't be necessary, but for some reason vi is linking to graphical MacVim
-alias vi='vim'
+alias vi='~/vim'
 alias vim='mvim -v'
 
 alias aron='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 1'
@@ -45,3 +45,9 @@ alias ckear='clear'
 alias celar='clear'
 alias clera='clear'
 alias clesr='clear'
+
+
+# Other Config Notes
+#
+#   To enable holding down a key in Sublime Vintage to work like Vim, instead of OSX Lion default
+#   defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
