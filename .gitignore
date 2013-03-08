@@ -16,6 +16,7 @@
 .CFUserTextEncoding
 .cwd
 .DS_Store
+.dssbackup*
 .lesshst
 .netrc
 .rnd
@@ -26,3 +27,6 @@
 arduino*
 *history
 PostgresNotes
+
+# Executables
+vim

@@ -3,6 +3,7 @@
 	email = michaelporter.0988@gmail.com
 [core]
 	excludesfile = /Users/michaelporter/.gitignore_global
+  editor = ~/vim
 [push]
   default = current
 [alias]

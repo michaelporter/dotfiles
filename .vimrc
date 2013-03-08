@@ -1,22 +1,42 @@
-
-" An example for a vimrc file.
+" Bulk of this file provided by Bram Moolenaar <Bram@vim.org>, personalization by yours truly
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
 endif
 
+" Vundle Settings
+"
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Valloric/YouCompleteMe' 
+" Required pairing vim to MacVim
+
+filetype plugin indent on 
+
+let g:gitgutter_enabled = 1
+" GitGutter settings
+" turn off  :GitGutterDisable
+" turn on   :GitGutterEnable
+" toggle    :GitGutterToggle.
+
+" turn on highlighting   :GitGutterLineHighlightsEnable
+" turn off highlighting  :GitGutterLineHighlightsDisable
+" toggle highlighting    :GitGutterLineHighlightsToggle.
+
+" jump to next hunk: :GitGutterNextHunk
+" jump to previous hunk: :GitGutterPrevHunk.
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
+
 set nocompatible
 
 " allow backspacing over everything in insert mode

@@ -23,7 +23,8 @@ SAVEHIST=150
 HISTFILE=~/.zsh_history
 
 # shouldn't be necessary, but for some reason vi is linking to graphical MacVim
-#alias vi='vim'
+alias vi='vim'
+alias vim='mvim -v'
 
 alias aron='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 1'
 alias aroff='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 0'
