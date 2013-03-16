@@ -1,5 +1,6 @@
 # Directories
 */
+uploads/
 
 # Extensions
 *.c
@@ -9,6 +10,7 @@
 *.pem
 *.png
 *.sql
+*.swp
 *.TMP
 *.txt
 

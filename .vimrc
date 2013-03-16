@@ -57,6 +57,8 @@ set smartindent
 set tabstop=2
 set wildmode=longest,full
 
+set hlsearch
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
