@@ -6,6 +6,7 @@ uploads/
 *.c
 *.doc
 *.jpg
+*.orig
 *.pdf
 *.pem
 *.png
@@ -30,6 +31,7 @@ uploads/
 arduino*
 *history
 PostgresNotes
+logfile
 
 # Executables
 vim

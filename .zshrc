@@ -32,11 +32,14 @@ alias aroff='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 0'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 
+alias k='kill -9'
+
 alias c='clear'
 alias lear='clear'
 alias leac='clear'
 alias alce='clear'
 alias clar='clear'
+alias cler='clear'
 alias claer='clear'
 alias cealr='clear'
 alias sclear='clear'
@@ -88,5 +91,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# postgres start
+#pg_ctl -D /usr/local/var/postgres -l logfile start
+#pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop
+
 # Customize to your needs...
-export PATH=/Users/michael/.rvm/gems/ruby-1.9.3-p392@stackpop/bin:/Users/michael/.rvm/gems/ruby-1.9.3@bread/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/michael/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/michael/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michael/.rvm/bin
+export PATH=/usr/local/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@stackpop/bin:/Users/michael/.rvm/gems/ruby-1.9.3@bread/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/michael/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/michael/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michael/.rvm/bin
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
