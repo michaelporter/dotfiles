@@ -10,6 +10,9 @@ cwd
 
 PROMPT='%% '
 
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
 autoload -U zutil
 autoload -U compinit
 autoload -U complist
