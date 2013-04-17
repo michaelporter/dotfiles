@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe' 
+Bundle 'terryma/vim-multiple-cursors'
 " Required pairing vim to MacVim
 
 filetype plugin indent on 
