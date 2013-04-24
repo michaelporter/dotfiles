@@ -37,6 +37,8 @@ alias redis='redis-server /usr/local/etc/redis.conf'
 
 alias k='kill -9'
 
+alias gt='git'
+
 alias c='clear'
 alias lear='clear'
 alias leac='clear'
@@ -53,6 +55,10 @@ alias celar='clear'
 alias clera='clear'
 alias clesr='clear'
 
+# fix slow git tab completion by coopting with zsh file completion
+__git_files () { 
+  _wanted files expl 'local files' _files     
+}
 
 # Other Config Notes
 #
