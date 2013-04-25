@@ -38,6 +38,8 @@ alias redis='redis-server /usr/local/etc/redis.conf'
 alias k='kill -9'
 
 alias gt='git'
+alias s='git status'
+alias gits='git status'
 
 alias c='clear'
 alias lear='clear'
