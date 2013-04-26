@@ -16,9 +16,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'airblade/vim-gitgutter'
+"
+" Required pairing vim to MacVim
 Bundle 'Valloric/YouCompleteMe' 
 Bundle 'terryma/vim-multiple-cursors'
-" Required pairing vim to MacVim
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 
 filetype plugin indent on 
 
