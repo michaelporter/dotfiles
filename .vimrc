@@ -68,6 +68,10 @@ set hlsearch
 map Q gq
 
 map <C-e> :nohlsearch<CR> 
+imap <C-p> console.log("");<ESC>3ha
+imap <C-l> logger.debug <ESC>ha 
+nmap <C-p> o<C-p>
+nmap <C-l> o<C-l>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.

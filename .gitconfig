@@ -7,14 +7,22 @@
 [push]
   default = current
 [alias]
-	s = status
+	amend = commit --amend -C HEAD
 	b = branch
 	co = checkout
-	amend = commit --amend -C HEAD
+  d = diff
+  df = difftool
   l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	s = status
+  sp = stash pop
+  st = stash
+[diff]
+  tool = diffmerge
+[difftool]
+  prompt = false
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+	path = /usr/bin/diffmerge
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
