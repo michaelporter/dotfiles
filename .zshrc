@@ -39,7 +39,11 @@ alias k='kill -9'
 
 alias gt='git'
 alias s='git status'
+alias dfg='git difftool'
 alias gits='git status'
+
+alias o='open'
+alias rdo='rvm default do'
 
 alias c='clear'
 alias lear='clear'

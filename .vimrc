@@ -68,7 +68,7 @@ set hlsearch
 map Q gq
 
 map <C-e> :nohlsearch<CR> 
-imap <C-p> console.log("");<ESC>3ha
+imap <C-p> console.log();<ESC>2ha
 imap <C-l> logger.debug <ESC>ha 
 nmap <C-p> o<C-p>
 nmap <C-l> o<C-l>
