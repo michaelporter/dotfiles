@@ -41,9 +41,13 @@ alias gt='git'
 alias s='git status'
 alias dfg='git difftool'
 alias gits='git status'
+alias gph='git push; git push heroku master'
 
 alias o='open'
-alias rdo='rvm default do'
+
+alias rdo='rvm default do '
+
+alias migrate='rake db:migrate --trace'
 
 alias c='clear'
 alias lear='clear'
@@ -70,7 +74,7 @@ __git_files () {
 #
 #   To enable holding down a key in Sublime Vintage to work like Vim, instead of OSX Lion default
 #   defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
-#
+
 # Oh-My-Zsh config follows
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -102,7 +106,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git, rails3)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -112,7 +116,7 @@ unsetopt correct_all
 #pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@stackpop/bin:/Users/michael/.rvm/gems/ruby-1.9.3@bread/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/michael/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/michael/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michael/.rvm/bin
+export PATH=/usr/local/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@stackpop/bin:/Users/michael/.rvm/gems/ruby-1.9.3@bread/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/michael/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/michael/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michael/.rvm/bin:/usr/local/bin/npm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

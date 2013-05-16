@@ -18,6 +18,8 @@
   st = stash
 [diff]
   tool = diffmerge
+[diff "nodiff"]
+  command = /usr/bin/true
 [difftool]
   prompt = false
 [difftool "diffmerge"]
