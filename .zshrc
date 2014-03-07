@@ -1,3 +1,5 @@
+source ~/.zprofile
+
 # switch and save the current path
 function cd() {
   builtin cd "$@";
@@ -9,6 +11,9 @@ alias cwd='cd "$(cat ~/.cwd)"'
 cwd
 
 PROMPT='%% '
+
+export EDITOR='vim'
+export BUNDLER_EDITOR='vim'
 
 autoload -U zmv
 alias mmv='noglob zmv -W'
@@ -35,19 +40,27 @@ alias aroff='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 0'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 
+alias pass='rdo passenger start'
+
 alias k='kill -9'
+
+alias curr='echo `rvm current`'
+export curr=`rvm current`
 
 alias gt='git'
 alias s='git status'
 alias dfg='git difftool'
 alias gits='git status'
 alias gph='git push; git push heroku master'
+alias gp='git pulls'
 
 alias o='open'
 
 alias rdo='rvm default do '
-
 alias migrate='rake db:migrate --trace'
+alias recreatedb='rdo rake db:drop; rdo rake db:create; rdo rake db:migrate --trace; rdo rake db:seed --trace'
+
+alias brewdb='mysql -u brewer -D brewcrate_subscription_development -p'
 
 alias c='clear'
 alias lear='clear'

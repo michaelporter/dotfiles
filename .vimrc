@@ -63,12 +63,20 @@ let g:gitgutter_enabled = 1
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 
+" sets a color column at the end of the allotted column width
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 set nocompatible
+
+set pastetoggle=<F2>
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set expandtab
 set history=50		" keep 50 lines of command line history
 set incsearch		" do incremental searching
 set ignorecase  " ignores all case when searching
@@ -80,6 +88,7 @@ set shiftwidth=2
 set showcmd		" display incomplete commands
 set smartcase   " ignores case only when search is all lowercase
 set smartindent
+set expandtab
 set tabstop=2
 set wildmode=longest,full
 
@@ -93,6 +102,7 @@ imap <C-p> console.log();<ESC>2ha
 imap <C-l> logger.debug <ESC>ha 
 nmap <C-p> o<C-p>
 nmap <C-l> o<C-l>
+nmap W :w<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
