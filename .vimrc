@@ -23,8 +23,29 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
+
+" jshint
+" syntastical plugin
 
 filetype plugin indent on 
+
+map <C-M> :NERDTreeToggle<CR>
+
+let g:syntastic_css_checkers = ['csslint']
+"let g:syntastic_coffee_checkers = ['coffeelint']
+let g:syntastic_coffee_checkers = ['coffee']
+let g:syntastic_haml_checkers = ['haml']
+let g:syntastic_html_checkers = ['html']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_ruby_checkers = ['mri']
+let g:syntastic_sass_checkers = ['sass']
+" let g:syntastic_debug = 1 " logs debugger messages in vim's :mes
 
 let g:gitgutter_enabled = 1
 " GitGutter settings
