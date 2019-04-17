@@ -32,8 +32,8 @@ SAVEHIST=150
 HISTFILE=~/.zsh_history
 
 # shouldn't be necessary, but for some reason vi is linking to graphical MacVim
-alias vi='~/vim'
-alias vim='mvim -v'
+#alias vi='~/vim'
+#alias vim='mvim -v'
 
 alias aron='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 1'
 alias aroff='./arduino_interact -b 9600 -p /dev/tty.usbmodem1421 -s 0'
@@ -44,9 +44,6 @@ alias pass='rdo passenger start'
 
 alias k='kill -9'
 
-alias curr='echo `rvm current`'
-export curr=`rvm current`
-
 alias gt='git'
 alias s='git status'
 alias dfg='git difftool'
@@ -56,7 +53,6 @@ alias gp='git pulls'
 
 alias o='open'
 
-alias rdo='rvm default do '
 alias migrate='rake db:migrate --trace'
 alias recreatedb='rdo rake db:drop; rdo rake db:create; rdo rake db:migrate --trace; rdo rake db:seed --trace'
 
@@ -90,7 +86,7 @@ __git_files () {
 
 # Oh-My-Zsh config follows
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -101,8 +97,12 @@ ZSH_THEME="robbyrussell"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
 # Comment this out to disable bi-weekly auto-update checks
- DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -112,6 +112,9 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -129,7 +132,41 @@ unsetopt correct_all
 #pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@stackpop/bin:/Users/michael/.rvm/gems/ruby-1.9.3@bread/bin:/Users/michael/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/michael/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/michael/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/michael/.rvm/bin:/usr/local/bin/npm
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin/npm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+eval "$(rbenv init -)"
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

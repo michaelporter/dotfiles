@@ -8,24 +8,26 @@ endif
 " Vundle Settings
 "
 
-filetype off
+set nocompatible  " be iMproved, required
+filetype off      " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'gmarik/vundle'
 
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 "
 " Required pairing vim to MacVim
-Bundle 'Valloric/YouCompleteMe' 
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
+"Plugin 'Valloric/YouCompleteMe' 
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
 
 syntax enable
 
@@ -69,8 +71,6 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
-
-set nocompatible
 
 set pastetoggle=<F2>
 
@@ -119,6 +119,8 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   "set hlsearch
 endif
+
+call vundle#end() " required
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
